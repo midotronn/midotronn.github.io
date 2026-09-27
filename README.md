@@ -27,14 +27,19 @@ preview assets come from the public T3R and MAESTRO websites. The active publica
 list is intentionally text-only.
 
 Keep publication status explicit: an accepted paper, a manuscript under review,
-a preprint and a research project should not be presented interchangeably.
+a poster acceptance, a preprint and a research project should not be presented
+interchangeably. Publication front matter includes verified citation authors;
+use `author_note` for a manuscript whose author list is withheld during review.
+The BB84 poster classification is documented in QIP 2025's official program.
 The public CV uses email and the website as contact details, without a phone
 number. Do not upload unpublished manuscripts unless they are ready for public
-release.
+release. Keep the downloadable PDF, the CV page and the profile's dates and
+coursework synchronized. Other projects appear in the CV only when
+`cv_selected: true`; the publications page can retain a broader portfolio.
 
-VITA internship dates are intentionally omitted until provided. Do not infer
-them from manuscript dates. Update the homepage's Fall 2027 opportunities text
-when it is no longer applicable. The sidebar portrait is
+Research internship dates come from the owner's confirmed history, not from
+manuscript dates. Update the homepage's Fall 2027 opportunities text when it is
+no longer applicable. The sidebar portrait is
 `images/mohammed-hassan.jpg`, an upright, cropped copy of the supplied personal
 photo. Keep the full-resolution original outside the repository and strip
 location metadata from replacement images.

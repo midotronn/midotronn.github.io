@@ -9,6 +9,7 @@ status: Under review
 status_key: review
 venue: CHI 2027
 role: First author
+author_note: Maintaining anonymity for submission purposes
 summary: An agentic authoring system for song-length 3D dance, connecting musical structure, localized language editing and recoverable creative alternatives.
 result: "In a study with 12 dance-experienced participants, MAESTRO received 47 of 72 overall-preference selections in blind comparisons."
 project_url: https://midotronn.github.io/MAESTRO/

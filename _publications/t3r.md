@@ -9,6 +9,14 @@ status: Accepted
 status_key: accepted
 venue: ASP-DAC 2027
 role: First author
+authors:
+  - Mohammed Hassan
+  - Zhenyang Chen
+  - Zheng Wang
+  - Zhixin Zhu
+  - Tianlong Chen
+  - Yingyan (Celine) Lin
+  - Chaojian Li
 summary: A training-free approach to efficient VLA inference, combining segmentation-guided token pruning with saliency-guided attention refinement.
 result: "On LIBERO-Spatial: 85% fewer scene-camera tokens, with 96% task success versus 97% for the unpruned baseline."
 project_url: https://midotronn.github.io/t3r/

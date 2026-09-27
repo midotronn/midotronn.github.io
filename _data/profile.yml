@@ -21,42 +21,46 @@ education:
     degree: B.S. in Computer Science and B.S. in Mathematics
     period: May 2025
 research:
+  - institution: The University of Texas at Austin
+    lab: VITA Lab
+    role: Research Intern
+    period: July 2026 to Present
+    supervision: Prof. Atlas Wang and Dr. Hezhen (Alex) Hu
+    description: Controllable long-form 3D dance authoring through musical-section planning, localized language editing, measured revision checks and recoverable alternatives.
+    projects:
+      - name: MAESTRO
+        url: /publication/maestro/
   - institution: Georgia Institute of Technology
     lab: EIC Lab
     role: Research Intern
-    period: July 2025 to present
-    supervision: Prof. Yingyan (Celine) Lin; Prof. Chaojian Li for T3R
+    period: July 2025 to February 2026
+    supervision: Prof. Yingyan (Celine) Lin; Prof. Chaojian Li
     description: Training-free VLA inference, attention refinement and automated LLM quantization.
     projects:
       - name: T3R
         url: /publication/t3r/
       - name: MIRA-Quant
         url: /project/mira-quant/
-  - institution: The University of Texas at Austin
-    lab: VITA Lab
-    role: Research Intern
-    supervision: Prof. Atlas Wang and Dr. Hezhen (Alex) Hu
-    description: Agentic long-form 3D dance composition, localized language-based editing and human-AI interaction.
-    projects:
-      - name: MAESTRO
-        url: /publication/maestro/
 experience:
   - organization: Microsoft
     role: Software Engineer
-    period: August 2025 to present
+    period: August 2025 to Present
     description: Backend systems and infrastructure for DNS-based threat intelligence, with an emphasis on reliability and safe deployment.
   - organization: Microsoft
     role: Software Engineering Intern
-    period: June to August 2024
+    period: June 2024 to August 2024
     description: Serverless analysis and machine learning for detecting potential data exfiltration in virtual-network DNS queries.
   - organization: Google
     role: STEP Intern
-    period: May to August 2023
+    period: May 2023 to August 2023
     description: Java data pipelines and their integration with notification systems.
 coursework:
-  completed: Reinforcement Learning (A), Deep Learning (A), Deep Generative Models (A).
+  completed: Reinforcement Learning; Deep Learning; Deep Generative Models.
   ongoing: Optimization; Planning, Search, and Reasoning Under Uncertainty.
-  foundations: Linear Algebra, Probability and Statistics, Algorithms and Complexity, Geometric Foundations of Data Science, Energy Efficient Computing.
+  foundations: Linear Algebra; Probability and Statistics; Algorithms and Complexity.
+technical_skills:
+  programming: Python, C++, Java, SQL.
+  research: PyTorch, JAX, Hugging Face Transformers, scikit-learn, LIBERO, Git, Linux.
 additional_projects:
   - title: MIRA-Quant
     status: Lab research project
@@ -64,7 +68,8 @@ additional_projects:
     description: A multi-agent iterative-reasoning system for automated LLM quantization, developed at Georgia Tech's EIC Lab. The system matches expert-tuned references within 0.3 perplexity across 15 configurations.
   - title: "Greenify: Energy-Aware Neural Architecture Search"
     status: Course research project
-    period: January to April 2025
+    period: January 2025 to April 2025
+    cv_selected: true
     description: A differentiable neural architecture search framework using PyTorch and CodeCarbon. On MNIST, the project reduced measured inference energy by 18% with less than 0.2% accuracy loss.
   - title: Hyperparameter Optimization of Diffusion Models
     status: Course research project
