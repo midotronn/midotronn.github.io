@@ -1,8 +1,9 @@
 # Mohammed Hassan's research website
 
 Personal research website at **https://midotronn.github.io/**, built with Jekyll
-and hosted on GitHub Pages. The repository retains the AcademicPages template
-and its license, with a custom lightweight presentation for the active pages.
+and hosted on GitHub Pages. It uses the traditional AcademicPages structure:
+a compact masthead, left author sidebar and plain text content. The template
+and its license are retained.
 
 ## Content
 
@@ -15,12 +16,14 @@ and its license, with a custom lightweight presentation for the active pages.
 | Experience and CV | `_pages/cv.md`, `files/Mohammed_Hassan_CV.pdf` |
 | Teaching | `_pages/teaching.html`, `_teaching/cs311.md` |
 | Page layouts | `_layouts/research*.html` |
-| Research cards | `_includes/research-card.html` |
-| Responsive styles | `assets/css/research.css` |
+| Publication list entries | `_includes/publication-entry.html` |
+| AcademicPages styles and small layout adjustments | `assets/css/main.scss`, `assets/css/academic.css` |
+| Navigation and profile-link interactions | `assets/js/academic.js` |
 | Project previews and social image | `images/research/` |
 
-The selected project previews come from the public T3R and MAESTRO project
-websites. Their project and code links are kept in the publication front matter.
+Project and code links are kept in the publication front matter. Existing project
+preview assets come from the public T3R and MAESTRO websites. The active publication
+list is intentionally text-only.
 
 Keep publication status explicit: an accepted paper, a manuscript under review,
 a preprint and a research project should not be presented interchangeably.
@@ -29,8 +32,10 @@ number. Do not upload unpublished manuscripts unless they are ready for public
 release.
 
 VITA internship dates are intentionally omitted until provided. Do not infer
-them from manuscript dates. Update the homepage's Fall 2027 opportunities
-notice when it is no longer applicable.
+them from manuscript dates. Update the homepage's Fall 2027 opportunities text
+when it is no longer applicable. The author avatar is intentionally unset until
+a suitable personal portrait is provided; do not use a stock headshot or another
+researcher's portrait.
 
 ## Local development
 
@@ -42,9 +47,10 @@ bundle exec jekyll build
 bundle exec jekyll serve
 ```
 
-The active layout uses static HTML and CSS without the legacy JavaScript bundle.
-There is no JavaScript build step for changes to this presentation. The template's
-optional JavaScript tooling remains in `package.json`.
+The active layout uses the existing AcademicPages Sass build and a small vanilla
+JavaScript file for mobile navigation and author links. There is no JavaScript
+bundling step for `academic.js`. The template's optional legacy JavaScript
+tooling remains in `package.json`.
 
 Inspect `/`, `/publications/`, `/cv/`, `/teaching/`, the individual publication
 pages and `/404.html` at both desktop and mobile widths. Check links to the

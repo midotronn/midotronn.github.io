@@ -1,68 +1,59 @@
 ---
 layout: research
-title: Experience
+title: CV
 permalink: /cv/
 section: experience
-description: Education, research internships, professional experience and selected coursework.
+description: Education, research, professional experience and teaching.
 redirect_from:
   - /resume
 ---
-<div class="container page-shell">
-  <header class="page-heading">
-    <p class="eyebrow">Background</p>
-    <h1>Experience &amp; CV</h1>
-    <p class="page-description">Research in efficient AI and interactive generation, grounded in computer science, mathematics and software engineering.</p>
-    <div class="link-row"><a class="button button-primary" href="{{ site.data.profile.cv | relative_url }}">Download my CV <span class="sr-only">(PDF)</span><span aria-hidden="true">&darr;</span></a></div>
-  </header>
-  <section class="page-section" aria-labelledby="education">
-    <h2 id="education">Education</h2>
-    <div class="timeline">
-      {% for item in site.data.profile.education %}
-      <article class="timeline-item">
-        <p class="timeline-period">{{ item.period }}</p>
-        <div><h3>{{ item.degree }}</h3><p>{{ item.institution }}</p></div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-  <section class="page-section" aria-labelledby="research-experience">
-    <h2 id="research-experience">Research experience</h2>
-    <div class="timeline">
-      {% for item in site.data.profile.research %}
-      <article class="timeline-item">
-        <p class="timeline-period">{{ item.period | default: item.role }}</p>
-        <div>
-          <h3>{{ item.lab }} / {{ item.institution }}</h3>
-          <p><strong>{{ item.role }}</strong></p>
-          <p class="supervision">{{ item.supervision }}</p>
-          <p>{{ item.description }}</p>
-          <div class="paper-links">{% for project in item.projects %}<a href="{{ project.url | relative_url }}">{{ project.name }}</a>{% endfor %}</div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-  <section class="page-section" aria-labelledby="industry-experience">
-    <h2 id="industry-experience">Industry experience</h2>
-    <div class="timeline">
-      {% for item in site.data.profile.experience %}
-      <article class="timeline-item">
-        <p class="timeline-period">{{ item.period }}</p>
-        <div><h3>{{ item.role }} / {{ item.organization }}</h3><p>{{ item.description }}</p></div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-  <section class="page-section" aria-labelledby="coursework">
-    <h2 id="coursework">Selected coursework</h2>
-    <dl class="coursework">
-      <dt>Graduate</dt><dd>{{ site.data.profile.coursework.completed }}</dd>
-      <dt>In progress</dt><dd>{{ site.data.profile.coursework.ongoing }}</dd>
-      <dt>Foundations</dt><dd>{{ site.data.profile.coursework.foundations }}</dd>
-    </dl>
-  </section>
-  <section class="page-section" aria-labelledby="teaching-experience">
-    <h2 id="teaching-experience">Teaching</h2>
-    <p>I was a teaching assistant for CS 311, Discrete Mathematics, at UT Austin from August 2022 to May 2025. <a href="{{ '/teaching/' | relative_url }}">More about my teaching experience</a>.</p>
-  </section>
+
+[Download my CV (PDF)]({{ site.data.profile.cv | relative_url }})
+
+## Education
+
+{% for item in site.data.profile.education %}
+<div class="cv-entry">
+  <h3>{{ item.degree }}</h3>
+  <p>{{ item.institution }}</p>
+  <p class="cv-meta">{{ item.period }}</p>
 </div>
+{% endfor %}
+
+## Research experience
+
+{% for item in site.data.profile.research %}
+<div class="cv-entry">
+  <h3>{{ item.role }}, {{ item.lab }}</h3>
+  <p>{{ item.institution }}{% if item.period %}, {{ item.period }}{% endif %}</p>
+  <p class="cv-meta">Supervision: {{ item.supervision }}</p>
+  <p>{{ item.description }}</p>
+  <p>{% for project in item.projects %}{% unless forloop.first %} / {% endunless %}<a href="{{ project.url | relative_url }}">{{ project.name }}</a>{% endfor %}</p>
+</div>
+{% endfor %}
+
+## Professional experience
+
+{% for item in site.data.profile.experience %}
+<div class="cv-entry">
+  <h3>{{ item.role }}, {{ item.organization }}</h3>
+  <p class="cv-meta">{{ item.period }}</p>
+  <p>{{ item.description }}</p>
+</div>
+{% endfor %}
+
+## Teaching
+
+**Teaching Assistant, CS 311: Discrete Mathematics**, UT Austin<br>
+August 2022 to May 2025
+
+Mentored more than 400 students in logic, combinatorics, graph theory and
+algorithm verification. [More about my teaching experience]({{ '/teaching/' | relative_url }}).
+
+## Selected coursework
+
+**Graduate:** {{ site.data.profile.coursework.completed }}
+
+**In progress:** {{ site.data.profile.coursework.ongoing }}
+
+**Foundations:** {{ site.data.profile.coursework.foundations }}

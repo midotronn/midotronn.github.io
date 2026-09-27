@@ -1,0 +1,18 @@
+{% assign paper = include.paper %}
+<article class="publication-entry">
+  <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
+  <p class="publication-meta">
+    {% if paper.status_key == "accepted" %}Accepted at <em>{{ paper.venue }}</em>.
+    {% elsif paper.status_key == "review" %}Under review at <em>{{ paper.venue }}</em>.
+    {% elsif paper.venue %}<em>{{ paper.venue }}</em>. {{ paper.status }}.
+    {% else %}{{ paper.status }}.{% endif %}
+    {{ paper.role }}.
+  </p>
+  <p>{{ paper.summary }}</p>
+  <p class="publication-links">
+    {% if paper.project_url %}<a href="{{ paper.project_url }}">Project website<span class="visually-hidden"> for {{ paper.short_title }}</span></a> / {% endif %}
+    {% if paper.code_url %}<a href="{{ paper.code_url }}">Code<span class="visually-hidden"> for {{ paper.short_title }}</span></a> / {% endif %}
+    {% if paper.paper_url %}<a href="{{ paper.paper_url }}">Paper<span class="visually-hidden"> for {{ paper.short_title }}</span></a> / {% endif %}
+    <a href="{{ paper.url | relative_url }}">Details<span class="visually-hidden"> for {{ paper.short_title }}</span></a>
+  </p>
+</article>

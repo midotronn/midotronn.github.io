@@ -23,12 +23,12 @@ repository               : "midotronn/midotronn.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "research-mark.svg"
+  avatar           :
   name             : "Mohammed Hassan"
   pronouns         : # example: "she/her"  
-  bio              : "M.S. Computer Science | Efficient embodied AI"
+  bio              : "M.S. student in Computer Science"
   location         : "Austin, Texas"
-  employer         : "The University of Texas at Austin"
+  employer         : "UT Austin"
   uri              : # URL
   email            : "mohassan1137@gmail.com"
 
@@ -284,14 +284,14 @@ defaults:
       type: pages
     values:
       layout: research-page
-      author_profile: false
+      author_profile: true
   # _teaching
   - scope:
       path: ""
       type: teaching
     values:
       layout: research-page
-      author_profile: false
+      author_profile: true
       section: teaching
       share: false
       comments: false
@@ -301,7 +301,7 @@ defaults:
       type: publications
     values:
       layout: research-publication
-      author_profile: false
+      author_profile: true
       section: research
       share: false
       comments: false

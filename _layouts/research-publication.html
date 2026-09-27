@@ -1,27 +1,17 @@
 ---
 layout: research
 ---
-<article class="container page-shell publication-detail">
-  <a class="back-link" href="{{ '/publications/' | relative_url }}">Back to research</a>
-  <header class="page-heading">
-    <div class="paper-meta">
-      <span class="status status-{{ page.status_key }}">{{ page.status }}</span>
-      <span>{{ page.role }}</span>
-      {% if page.venue %}<span>{{ page.venue }}</span>{% endif %}
-    </div>
-    <h1>{{ page.title }}</h1>
-    <p class="page-description">{{ page.summary }}</p>
-    <div class="link-row">
-      {% if page.project_url %}<a class="button button-primary" href="{{ page.project_url }}">Project website <span aria-hidden="true">&nearr;</span></a>{% endif %}
-      {% if page.code_url %}<a class="button button-secondary" href="{{ page.code_url }}">Code</a>{% endif %}
-      {% if page.paper_url %}<a class="button button-secondary" href="{{ page.paper_url }}">Read paper</a>{% endif %}
-    </div>
-  </header>
-  {% if page.image %}
-  <figure class="detail-image">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="{{ page.image_width }}" height="{{ page.image_height }}">
-    {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
-  </figure>
-  {% endif %}
-  <div class="prose">{{ content }}</div>
-</article>
+<p class="publication-meta">
+  {{ page.role }}.
+  {% if page.status_key == "accepted" %}Accepted at {{ page.venue }}.
+  {% elsif page.status_key == "review" %}Under review at {{ page.venue }}.
+  {% elsif page.venue %}{{ page.venue }}. {{ page.status }}.
+  {% else %}{{ page.status }}.{% endif %}
+</p>
+<p class="publication-links">
+  {% if page.project_url %}<a href="{{ page.project_url }}">Project website</a>{% endif %}
+  {% if page.code_url %}{% if page.project_url %} / {% endif %}<a href="{{ page.code_url }}">Code</a>{% endif %}
+  {% if page.paper_url %}{% if page.project_url or page.code_url %} / {% endif %}<a href="{{ page.paper_url }}">Paper</a>{% endif %}
+</p>
+{{ content }}
+<p><a href="{{ '/publications/' | relative_url }}">Back to publications</a></p>

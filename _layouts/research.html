@@ -1,52 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#f7f8fa">
-    <title>{% if page.url != "/" %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-    <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
-    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-    <link rel="icon" href="{{ '/images/research-mark.svg' | relative_url }}" type="image/svg+xml">
-    <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
-    <meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ '/images/research/social-card.png' | absolute_url }}">
-    <meta name="twitter:card" content="summary_large_image">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Mohammed Hassan, home">
-          <span class="wordmark-symbol" aria-hidden="true">mh.</span>
-          <span>Mohammed Hassan</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <ul class="navigation">
-            {% for item in site.data.navigation.main %}
-            <li><a href="{{ item.url | relative_url }}"{% if page.section == item.id %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" tabindex="-1">
-      {{ content }}
-    </main>
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.profile.name }}.</p>
-        <div class="footer-links">
-          <a href="mailto:{{ site.data.profile.email }}">Email</a>
-          <a href="{{ site.data.profile.github }}" rel="me">GitHub</a>
-          <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
-          <a href="https://github.com/midotronn/midotronn.github.io">Site source</a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+---
+layout: default
+---
+<div id="main" role="main" tabindex="-1">
+  {% include sidebar.html %}
+  <article class="page">
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title">{{ page.title | escape }}</h1>
+      </header>
+      <section class="page__content">
+        {{ content }}
+      </section>
+    </div>
+  </article>
+</div>
