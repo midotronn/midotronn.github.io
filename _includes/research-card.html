@@ -1,0 +1,25 @@
+{% assign paper = include.paper %}
+<article class="research-card{% unless paper.image %} research-card-text{% endunless %}">
+  {% if paper.image %}
+  <a class="research-card-image" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ paper.image | relative_url }}" alt="" loading="lazy" decoding="async" width="{{ paper.image_width }}" height="{{ paper.image_height }}">
+  </a>
+  {% endif %}
+  <div class="research-card-content">
+    <div class="paper-meta">
+      <span class="status status-{{ paper.status_key }}">{{ paper.status }}</span>
+      {% if paper.venue %}<span>{{ paper.venue }}</span>{% endif %}
+      <span>{{ paper.role }}</span>
+    </div>
+    <h3><a href="{{ paper.url | relative_url }}">{{ paper.short_title }}</a></h3>
+    <p class="research-card-title">{{ paper.display_title }}</p>
+    <p>{{ paper.summary }}</p>
+    {% if paper.result %}<p class="result-note">{{ paper.result }}</p>{% endif %}
+    <div class="paper-links">
+      <a href="{{ paper.url | relative_url }}">Overview <span class="sr-only">of {{ paper.short_title }}</span></a>
+      {% if paper.project_url %}<a href="{{ paper.project_url }}">Project <span class="sr-only">website for {{ paper.short_title }}</span><span aria-hidden="true">&nearr;</span></a>{% endif %}
+      {% if paper.code_url %}<a href="{{ paper.code_url }}">Code <span class="sr-only">for {{ paper.short_title }}</span></a>{% endif %}
+      {% if paper.paper_url %}<a href="{{ paper.paper_url }}">Paper <span class="sr-only">for {{ paper.short_title }}</span></a>{% endif %}
+    </div>
+  </div>
+</article>

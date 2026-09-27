@@ -1,0 +1,72 @@
+name: Mohammed Hassan
+email: mohassan1137@gmail.com
+github: https://github.com/midotronn
+cv: /files/Mohammed_Hassan_CV.pdf
+headline: Efficient models. Meaningful human control.
+intro: >-
+  I am a master's student in Computer Science at The University of Texas at Austin.
+  I study efficient multimodal and embodied AI, with an interest in systems that
+  are both computationally practical and responsive to the people using them.
+research_intro: >-
+  My work connects two questions: how can we make intelligent systems more
+  efficient and reliable, and how can people guide what those systems do?
+interests:
+  - title: Efficient embodied AI
+    description: Reducing unnecessary computation in vision-language-action models while retaining task-relevant information.
+  - title: Controllable generation
+    description: Building agentic workflows that let people plan, revise and recover complex multimodal outputs.
+  - title: Robust interaction
+    description: Understanding how models and systems respond to changing environments, instructions and user feedback.
+education:
+  - institution: The University of Texas at Austin
+    degree: M.S. in Computer Science
+    period: Expected May 2027
+  - institution: The University of Texas at Austin
+    degree: B.S. in Computer Science and B.S. in Mathematics
+    period: May 2025
+research:
+  - institution: Georgia Institute of Technology
+    lab: EIC Lab
+    role: Research Intern
+    period: July 2025 to present
+    supervision: Prof. Yingyan (Celine) Lin; Prof. Chaojian Li for T3R
+    description: Training-free VLA inference, attention refinement and automated LLM quantization.
+    projects:
+      - name: T3R
+        url: /publication/t3r/
+      - name: MIRA-Quant
+        url: /publication/mira-quant/
+  - institution: The University of Texas at Austin
+    lab: VITA Lab
+    role: Research Intern
+    supervision: Prof. Atlas Wang and Dr. Hezhen (Alex) Hu
+    description: Agentic long-form 3D dance composition, localized language-based editing and human-AI interaction.
+    projects:
+      - name: MAESTRO
+        url: /publication/maestro/
+experience:
+  - organization: Microsoft
+    role: Software Engineer
+    period: August 2025 to present
+    description: Backend systems and infrastructure for DNS-based threat intelligence, with an emphasis on reliability and safe deployment.
+  - organization: Microsoft
+    role: Software Engineering Intern
+    period: June to August 2024
+    description: Serverless analysis and machine learning for detecting potential data exfiltration in virtual-network DNS queries.
+  - organization: Google
+    role: STEP Intern
+    period: May to August 2023
+    description: Java data pipelines and their integration with notification systems.
+coursework:
+  completed: Reinforcement Learning (A), Deep Learning (A), Deep Generative Models (A).
+  ongoing: Optimization; Planning, Search, and Reasoning Under Uncertainty.
+  foundations: Linear Algebra, Probability and Statistics, Algorithms and Complexity, Geometric Foundations of Data Science, Energy Efficient Computing.
+additional_projects:
+  - title: "Greenify: Energy-Aware Neural Architecture Search"
+    status: Preprint
+    period: January to April 2025
+    description: A differentiable neural architecture search framework using PyTorch and CodeCarbon. On MNIST, the project reduced measured inference energy by 18% with less than 0.2% accuracy loss.
+  - title: Hyperparameter Optimization of Diffusion Models
+    status: Preprint
+    period: October to December 2024
+    description: A comparison of random/grid search, Bayesian optimization and gradient-based methods, including their suitability for flow-based generative models.

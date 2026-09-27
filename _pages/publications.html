@@ -1,36 +1,42 @@
 ---
-layout: archive
-title: "Publications"
+layout: research
+title: Research
 permalink: /publications/
-author_profile: true
+section: research
+description: Selected research in efficient embodied AI, controllable multimodal generation and model compression.
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<div class="container page-shell">
+  <header class="page-heading">
+    <p class="eyebrow">Papers and projects</p>
+    <h1>Research</h1>
+    <p class="page-description">{{ site.data.profile.research_intro }}</p>
+  </header>
+  <h2 class="sr-only">Featured research</h2>
+  <div class="research-list">
+    {% assign featured = site.publications | where: "featured", true | sort: "order" %}
+    {% for paper in featured %}
+    {% include research-card.html paper=paper %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+  </div>
+  <section class="page-section" aria-labelledby="more-research">
+    <h2 id="more-research">Additional work</h2>
+    <div class="compact-grid">
+      {% assign additional = site.publications | where: "featured", false | sort: "order" %}
+      {% for paper in additional %}
+      {% include research-card.html paper=paper %}
+      {% endfor %}
+    </div>
+  </section>
+  <section class="page-section" aria-labelledby="earlier-projects">
+    <h2 id="earlier-projects">Earlier projects</h2>
+    <div class="project-notes">
+      {% for project in site.data.profile.additional_projects %}
+      <article class="project-note">
+        <div class="paper-meta"><span class="status status-project">{{ project.status }}</span><span>{{ project.period }}</span></div>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>

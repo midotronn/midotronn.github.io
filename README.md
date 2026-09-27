@@ -1,61 +1,61 @@
-# Mohammed Hassan — Academic Website
+# Mohammed Hassan's research website
 
-Personal academic website built with the [AcademicPages](https://github.com/academicpages/academicpages.github.io)
-Jekyll template (a fork of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)),
-hosted for free on GitHub Pages.
+Personal research website at **https://midotronn.github.io/**, built with Jekyll
+and hosted on GitHub Pages. The repository retains the AcademicPages template
+and its license, with a custom lightweight presentation for the active pages.
 
-**Live URL (once deployed):** https://midotronn.github.io
+## Content
 
-## Where things live
-
-| What | File / folder |
+| Content | Source |
 | --- | --- |
-| Site-wide settings, sidebar, social links | `_config.yml` |
-| Top navigation menu | `_data/navigation.yml` |
-| Homepage / About text | `_pages/about.md` |
-| CV page | `_pages/cv.md` |
-| Publications (one Markdown file per paper) | `_publications/` |
-| Teaching (one Markdown file per entry) | `_teaching/` |
-| Profile photo | `images/profile.png` (replace this) |
-| PDFs and other downloads | `files/` |
+| Biography, contact, experience and coursework | `_data/profile.yml` |
+| Main navigation | `_data/navigation.yml` |
+| Homepage | `_pages/about.md` |
+| Research index and individual projects | `_pages/publications.html`, `_publications/` |
+| Experience and CV | `_pages/cv.md`, `files/Mohammed_Hassan_CV.pdf` |
+| Teaching | `_pages/teaching.html`, `_teaching/cs311.md` |
+| Page layouts | `_layouts/research*.html` |
+| Research cards | `_includes/research-card.html` |
+| Responsive styles | `assets/css/research.css` |
+| Project previews and social image | `images/research/` |
 
-Sections for Talks, Portfolio, and Blog are still present in the template but
-hidden from the menu. To re-enable any of them, uncomment the relevant lines in
-`_data/navigation.yml`.
+The selected project previews come from the public T3R and MAESTRO project
+websites. Their project and code links are kept in the publication front matter.
 
-## Things to fill in (search for `TODO`)
+Keep publication status explicit: an accepted paper, a manuscript under review,
+a preprint and a research project should not be presented interchangeably.
+The public CV uses email and the website as contact details, without a phone
+number. Do not upload unpublished manuscripts unless they are ready for public
+release.
 
-1. **`_config.yml`** — bio, location, employer, email, Google Scholar, ORCID, LinkedIn, Twitter, etc.
-2. **`_pages/about.md`** — your intro, news, and research interests.
-3. **`_pages/cv.md`** — education, experience, skills, service.
-4. **`_publications/`** — replace the example file with your real papers.
-5. **`_teaching/`** — replace the example file with your real teaching.
-6. **`images/profile.png`** — swap in your own headshot.
+VITA internship dates are intentionally omitted until provided. Do not infer
+them from manuscript dates. Update the homepage's Fall 2027 opportunities
+notice when it is no longer applicable.
 
-## Deploying to GitHub Pages
+## Local development
 
-1. Create a **public** repo on GitHub named exactly `midotronn.github.io`.
-2. Push this folder to it:
-   ```bash
-   git add -A
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/midotronn/midotronn.github.io.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**,
-   branch `main`, folder `/ (root)`. Save.
-4. Wait ~1 minute, then visit **https://midotronn.github.io**.
+The existing Ruby dependencies are defined in `Gemfile`:
 
-Every push to `main` rebuilds and redeploys the site automatically.
-
-## Local preview (optional)
-
-GitHub Pages builds the site for you, so local preview is optional. It requires
-Ruby ≥ 3.0 (your system Ruby 2.6 is too old). If you want it:
-```bash
-# install a modern Ruby first (e.g. via Homebrew: brew install ruby)
+```sh
 bundle install
-bundle exec jekyll serve --livereload
-# then open http://localhost:4000
+bundle exec jekyll build
+bundle exec jekyll serve
 ```
+
+The active layout uses static HTML and CSS without the legacy JavaScript bundle.
+There is no JavaScript build step for changes to this presentation. The template's
+optional JavaScript tooling remains in `package.json`.
+
+Inspect `/`, `/publications/`, `/cv/`, `/teaching/`, the individual publication
+pages and `/404.html` at both desktop and mobile widths. Check links to the
+downloadable CV and external project pages after content changes.
+
+## Deployment
+
+GitHub Pages builds the root of `main` automatically. Preserve the existing
+branch-based Pages configuration. Publish only through the repository owner's
+personal `midotronn` account.
+
+Unused example pages and sample downloads are excluded in `_config.yml` rather
+than appearing on the live site. Add any newly activated section to the
+navigation and sitemap deliberately.

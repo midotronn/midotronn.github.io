@@ -8,14 +8,21 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
+  - title: "About"
+    id: about
+    url: /
+
+  - title: "Research"
+    id: research
     url: /publications/
 
-  - title: "Teaching"
-    url: /teaching/    
-
-  - title: "CV"
+  - title: "Experience"
+    id: experience
     url: /cv/
+
+  - title: "Teaching"
+    id: teaching
+    url: /teaching/
 
   # Extra sections available in the template but hidden from the menu for now.
   # Uncomment any of these to add them back to the navigation bar.
