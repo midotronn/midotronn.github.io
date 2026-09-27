@@ -59,10 +59,10 @@ coursework:
   foundations: Linear Algebra, Probability and Statistics, Algorithms and Complexity, Geometric Foundations of Data Science, Energy Efficient Computing.
 additional_projects:
   - title: "Greenify: Energy-Aware Neural Architecture Search"
-    status: Preprint
+    status: Course research project
     period: January to April 2025
     description: A differentiable neural architecture search framework using PyTorch and CodeCarbon. On MNIST, the project reduced measured inference energy by 18% with less than 0.2% accuracy loss.
   - title: Hyperparameter Optimization of Diffusion Models
-    status: Preprint
+    status: Course research project
     period: October to December 2024
     description: A comparison of random/grid search, Bayesian optimization and gradient-based methods, including their suitability for flow-based generative models.
