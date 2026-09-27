@@ -33,9 +33,10 @@ release.
 
 VITA internship dates are intentionally omitted until provided. Do not infer
 them from manuscript dates. Update the homepage's Fall 2027 opportunities text
-when it is no longer applicable. The author avatar is intentionally unset until
-a suitable personal portrait is provided; do not use a stock headshot or another
-researcher's portrait.
+when it is no longer applicable. The sidebar portrait is
+`images/mohammed-hassan.jpg`, an upright, cropped copy of the supplied personal
+photo. Keep the full-resolution original outside the repository and strip
+location metadata from replacement images.
 
 ## Local development
 

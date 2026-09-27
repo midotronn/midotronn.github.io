@@ -23,7 +23,7 @@ repository               : "midotronn/midotronn.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           :
+  avatar           : "mohammed-hassan.jpg"
   name             : "Mohammed Hassan"
   pronouns         : # example: "she/her"  
   bio              : "M.S. student in Computer Science"
