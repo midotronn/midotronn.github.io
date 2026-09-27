@@ -31,7 +31,7 @@ research:
       - name: T3R
         url: /publication/t3r/
       - name: MIRA-Quant
-        url: /publication/mira-quant/
+        url: /project/mira-quant/
   - institution: The University of Texas at Austin
     lab: VITA Lab
     role: Research Intern
@@ -58,6 +58,10 @@ coursework:
   ongoing: Optimization; Planning, Search, and Reasoning Under Uncertainty.
   foundations: Linear Algebra, Probability and Statistics, Algorithms and Complexity, Geometric Foundations of Data Science, Energy Efficient Computing.
 additional_projects:
+  - title: MIRA-Quant
+    status: Lab research project
+    url: /project/mira-quant/
+    description: A multi-agent iterative-reasoning system for automated LLM quantization, developed at Georgia Tech's EIC Lab. The system matches expert-tuned references within 0.3 perplexity across 15 configurations.
   - title: "Greenify: Energy-Aware Neural Architecture Search"
     status: Course research project
     period: January to April 2025

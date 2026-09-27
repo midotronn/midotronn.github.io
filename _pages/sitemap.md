@@ -19,6 +19,14 @@ description: A guide to the pages on this website.
 - [{{ paper.title }}]({{ paper.url | relative_url }})
 {% endfor %}
 
+## Other research projects
+
+{% for project in site.data.profile.additional_projects %}
+{% if project.url %}
+- [{{ project.title }}]({{ project.url | relative_url }})
+{% endif %}
+{% endfor %}
+
 ## Teaching
 
 - [CS 311: Discrete Mathematics]({{ '/teaching/cs311/' | relative_url }})

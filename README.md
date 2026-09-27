@@ -13,6 +13,7 @@ and its license are retained.
 | Main navigation | `_data/navigation.yml` |
 | Homepage | `_pages/about.md` |
 | Research index and individual projects | `_pages/publications.html`, `_publications/` |
+| Other research projects | `_data/profile.yml` (`additional_projects`), `_pages/mira-quant.md` |
 | Experience and CV | `_pages/cv.md`, `files/Mohammed_Hassan_CV.pdf` |
 | Teaching | `_pages/teaching.html`, `_teaching/cs311.md` |
 | Page layouts | `_layouts/research*.html` |
