@@ -60,7 +60,7 @@ redirect_from:
 August 2022 to May 2025
 
 Mentored more than 400 students in logic, combinatorics, graph theory and
-algorithm verification. [More about my teaching experience]({{ '/teaching/' | relative_url }}).
+algorithm verification.
 
 ## Industry experience
 
