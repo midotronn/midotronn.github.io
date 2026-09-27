@@ -8,10 +8,12 @@ layout: research
   {% elsif page.venue %}{{ page.venue }}. {{ page.status }}.
   {% else %}{{ page.status }}.{% endif %}
 </p>
-<p class="publication-links">
-  {% if page.project_url %}<a href="{{ page.project_url }}">Project website</a>{% endif %}
-  {% if page.code_url %}{% if page.project_url %} / {% endif %}<a href="{{ page.code_url }}">Code</a>{% endif %}
-  {% if page.paper_url %}{% if page.project_url or page.code_url %} / {% endif %}<a href="{{ page.paper_url }}">Paper</a>{% endif %}
-</p>
+{% if page.project_url or page.paper_url %}
+  <p class="publication-links">
+    {% if page.project_url %}<a href="{{ page.project_url }}">Project website</a>{% endif %}
+    {% if page.project_url and page.paper_url %} / {% endif %}
+    {% if page.paper_url %}<a href="{{ page.paper_url }}">Paper</a>{% endif %}
+  </p>
+{% endif %}
 {{ content }}
 <p><a href="{{ '/publications/' | relative_url }}">Back to publications</a></p>
