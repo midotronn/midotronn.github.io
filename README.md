@@ -15,7 +15,7 @@ and its license are retained.
 | Research index and individual projects | `_pages/publications.html`, `_publications/` |
 | Other research projects | `_data/profile.yml` (`additional_projects`), `_pages/mira-quant.md` |
 | Experience and CV | `_pages/cv.md`, `files/Mohammed_Hassan_CV.pdf` |
-| Teaching | `_pages/teaching.html`, `_teaching/cs311.md` |
+| Academic service (teaching and peer review) | `_pages/teaching.html`, `_teaching/cs311.md` |
 | Page layouts | `_layouts/research*.html` |
 | Publication list entries | `_includes/publication-entry.html` |
 | AcademicPages styles and small layout adjustments | `assets/css/main.scss`, `assets/css/academic.css` |
@@ -36,6 +36,9 @@ number. Do not upload unpublished manuscripts unless they are ready for public
 release. Keep the downloadable PDF, the CV page and the profile's dates and
 coursework synchronized. Other projects appear in the CV only when
 `cv_selected: true`; the publications page can retain a broader portfolio.
+
+The Academic Service page retains `/teaching/` for existing links and separates
+teaching from peer review. List reviewing dates only when provided by the owner.
 
 Research internship dates come from the owner's confirmed history, not from
 manuscript dates. Update the homepage's Fall 2027 opportunities text when it is
