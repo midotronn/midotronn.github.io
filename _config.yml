@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Mohammed Hassan"
 title_separator          : "-"
 name                     : &name "Mohammed Hassan"
-description              : &description "Mohammed Hassan is a computer science master's student at UT Austin researching efficient embodied AI and human-controllable multimodal systems."
+description              : &description "Mohammed Hassan is a computer science master's student at UT Austin researching efficient, physically plausible embodied AI and human-controllable multimodal systems."
 url                      : https://midotronn.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
