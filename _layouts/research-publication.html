@@ -7,6 +7,7 @@ layout: research
   {% elsif page.status_key == "review" %}Under review at {{ page.venue }}.
   {% elsif page.venue %}{{ page.venue }}. {{ page.status }}.
   {% else %}{{ page.status }}.{% endif %}
+  {% if page.presentation %}<span class="publication-tag">{{ page.presentation }}</span>{% endif %}
 </p>
 {% if page.project_url or page.paper_url %}
   <p class="publication-links">

@@ -8,6 +8,7 @@ featured: true
 status: Accepted
 status_key: accepted
 venue: ASP-DAC 2027
+presentation: Oral presentation
 role: First author
 authors:
   - Mohammed Hassan

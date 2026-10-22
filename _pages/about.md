@@ -23,3 +23,12 @@ and [Dr. Hezhen (Alex) Hu](https://alexhu.top/).
 
 I am interested in PhD opportunities starting in Fall 2027. I am always happy to
 discuss research and potential collaborations.
+
+## Selected research
+
+{% assign selected_papers = site.publications | where: "featured", true | sort: "order" %}
+{% for paper in selected_papers %}
+{% include publication-entry.html paper=paper heading_level=3 %}
+{% endfor %}
+
+[View all publications and projects]({{ '/publications/' | relative_url }})

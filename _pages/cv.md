@@ -27,7 +27,7 @@ redirect_from:
 <div class="cv-entry">
   <h3>{{ publication.title }}</h3>
   <p>{% if publication.author_note %}<em>{{ publication.author_note }}</em>{% else %}{% for author in publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author == site.data.profile.name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% endfor %}{% endif %}</p>
-  <p class="cv-meta">{% if publication.manuscript %}{{ publication.manuscript }}. {% endif %}{{ publication.venue }}. <strong>{{ publication.status }}.</strong>{% if publication.project_url %} <a href="{{ publication.project_url }}">Project website</a>{% endif %}{% if publication.paper_url %} <a href="{{ publication.paper_url }}">Paper</a>{% endif %}</p>
+  <p class="cv-meta">{% if publication.manuscript %}{{ publication.manuscript }}. {% endif %}{{ publication.venue }}. <strong>{{ publication.status }}.</strong>{% if publication.presentation %} <span class="publication-tag">{{ publication.presentation }}</span>{% endif %}{% if publication.project_url %} <a href="{{ publication.project_url }}">Project website</a>{% endif %}{% if publication.paper_url %} <a href="{{ publication.paper_url }}">Paper</a>{% endif %}</p>
 </div>
 {% endfor %}
 
