@@ -21,6 +21,7 @@ authors:
 summary: A training-free approach to efficient VLA inference, combining segmentation-guided token pruning with saliency-guided attention refinement.
 result: "On LIBERO-Spatial: 85% fewer scene-camera tokens, with 96% task success versus 97% for the unpruned baseline."
 project_url: https://midotronn.github.io/t3r/
+paper_url: https://arxiv.org/abs/2611.08413
 code_url: https://github.com/midotronn/t3r
 image: /images/research/t3r.webp
 image_alt: T3R's visual grounding example, from a full robot scene to selected prompts and the relevant object.
